@@ -4,11 +4,10 @@ MAINTAINER tjkim <iljine@pentalink.com>
 USER root
 
 RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd && \ 
-      yum clean all --disableplugin=subscription-manager -y && \
-
-
-# Run as the 1001 user
-USER 1001
+      yum clean all --disableplugin=subscription-manager -y
 
 # Launch httpd
 RUN systemctl start httpd
+
+# Run as the 1001 user
+USER 1001
