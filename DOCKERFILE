@@ -1,10 +1,10 @@
 FROM registry.access.redhat.com/rhscl/httpd-24-rhel7
 
 MAINTAINER tjkim <iljine@pentalink.com>
-USER root
+#USER root
 
-RUN   yum install -y httpd && \ 
-      yum clean all -y
+#RUN   yum install -y httpd && \ 
+#      yum clean all -y
 
 # Run as the 1001 user
 USER 1001
