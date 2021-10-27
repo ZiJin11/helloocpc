@@ -11,4 +11,4 @@ RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd && \
 USER 1001
 
 # Launch httpd
-CMD /usr/sbin/httpd -D FOREGROUND
+RUN systemctl start httpd
