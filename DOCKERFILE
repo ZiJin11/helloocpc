@@ -1,0 +1,14 @@
+FROM registry.access.redhat.com/ubi8/ubi:latest 
+
+MAINTAINER tjkim <iljine@pentalink.com>
+USER root
+
+RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd && \ 
+      yum clean all --disableplugin=subscription-manager -y && \
+
+
+# Run as the 1001 user
+USER 1001
+
+# Launch httpd
+CMD /usr/sbin/httpd -D FOREGROUND
