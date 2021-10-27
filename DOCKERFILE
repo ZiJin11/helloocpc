@@ -4,7 +4,7 @@ MAINTAINER tjkim <iljine@pentalink.com>
 
 
 RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd && \ 
-      yum clean all --disableplugin=subscription-manager -y
+      yum clean all -y
 
 # Run as the 1001 user
 USER 1001
